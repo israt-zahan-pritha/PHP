@@ -1,67 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>This is my First Project</h1>
-     <?php 
-     echo "Hello echo <br>", "How are you <br>";
-     print "Hello print <br>";
-     var_dump("Hello var dump <br>");
-    //  Variable
-     $myFullName = "Israt Zahan <br>";
-     echo "My Full Name Is: $myFullName";
-     $myFullName = "Pritha Islam  <br>";
-     echo "My Full Name Is: $myFullName";
+<?php 
+$msg = "Hello World";
+echo "$msg<br>";
+echo '$msg<br>';
 
-    //Data types
+//Comparison Operators
+/*
+== Equal
+=== Identical
+!= Not Equal
+<> Not Equal
+!== Not Identical
+> Grater than
+< Less than
+>= Grater than or Equal to
+<= Less than or Equal to  
+*/
+$num1 = 5;
+$num2 ="5";
+if ($num1 === $num2) {
+echo "Equal<br>";
+}else {
+    echo "Not Equal<br>";
+}
 
-     //String
-     $myString = "Hello String";
-     var_dump($myString);
-     echo "<br>";
-     //Integer
-     $myInteger = 123;
-     var_dump ($myInteger);
-     echo "<br>";
-     //Float
-     $myFloat = 12.34;
-     var_dump($myFloat);
-     echo "<br>";
-     //Boolean
-     $myBoolean = true; //true inverted Comma'r vitore rakle String hoye jabe 
-     var_dump($myBoolean);
-     echo "<br>";
-     //Array
-     $myArray = array("Pritha" , "Dhaka" , "CMBD");
-     var_dump($myArray);
-     echo "<br>";
-     //Object
-     class MyClass
-     {
-        Public $name = "Pritha";
-     }
-    $myObject = new MyClass  ;
-    var_dump($myObject);
-    echo "<br>";
-    //Null
-    $myNull = NULL;
-    var_dump($myNull);
-    echo "<br>";
-    //Resource
-    $myResource = @fopen("12-variable-dataTypes.php" , "r");
-    var_dump($myResource);
-    echo "<br>";
-    fclose($myResource);
+//Increment/Decrement Operators
+/*
+++$ Pre-increment => 1 + x
+$x++ Post-increment => x + 1
+--$x Pre-decrement
+$x-- Post-decrement
+*/
+$x = 5;
+$x = $x + 1;
+$x += 1;
+$x ++; // 1+x 
 
-    //Constants
-    define ("birthPlace" , "Dhaka");
-    echo birthPlace;
-    echo "<br>";
+//Conditional (Ternary) Operator
+// $a ? $b : $c 
+
+//Null Coalescing Operator
+// $a ?? $b
+
+$file = @file('non_existent_file.text');
+if ($file === false) {
+    echo "File not Found<br>";
+}
+
+if (print @'nai') {
+    echo "Printed<br>";
+} else {
+    echo "Not Printed<br>";
+}
+
  ?>
-
-</body>
-</html>
