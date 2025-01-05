@@ -1,6 +1,6 @@
 
  <?php
-    $conn = mysqli_connect("localhost", "root", "", "cmdb263");
+    $conn = mysqli_connect("localhost", "root", "", "cmbd263");
     if(isset($_POST['add_user'])){
         $name = $_POST['name'];
         $email = $_POST['email'];
